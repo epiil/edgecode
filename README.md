@@ -1,4 +1,4 @@
 edgecode
 ========
 
-edge information for motion picture film identification
+Edge information as an aid to motion picture film identification.
