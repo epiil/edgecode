@@ -63,7 +63,7 @@ x (equis)
           2009 x + • (equis, plus, circle)
           2010 ▲ + • (triangle, plus, circle)
 
-#Kodak Manufacturing Year Codes, 1989-2016
+#Kodak US Manufacturing Year Codes, 1989-2016
 
 1989 DE
 1990 LE
@@ -93,5 +93,29 @@ x (equis)
 2014 DE
 2015 FA
 2016 LS
+
+#Kodak US manufacturing edge codes, 1932-1941 (8mm)
+
+1932 • (circle)
+1933 January through June       ■ (square)
+1933 July though December       ▲ (triangle)
+1934 January through June     • • (circle, circle)
+1934 July though December     ■ ■ (square, square)
+1935 January through June     ▲ ▲ (triangle, triangle)
+1935 July though December     • ■ (circle, square)
+1936 January through June     • ▲ (circle, triangle)
+1936 July though December     ▲ ■ (triangle, square)
+1937 January through June     ■ • (square, circle)
+1937 July though December     ▲ • (triangle, circle)
+1938 January through June     ■ ▲ (square, triangle)
+1938 July though December      ++ (plus, plus)
+1939 January through June     + • (plus, circle)
+1939 July though December     + ■ (plus, square)
+1940 January through June     + ▲ (plus, triangle)
+1940 July though December     • + (circle, plus)
+1941 January through June     ■ + (square, plus)
+1941 July though December     ▲ + (triangle, plus)
+
+
           
           
