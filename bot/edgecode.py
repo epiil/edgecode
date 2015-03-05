@@ -14,7 +14,7 @@ print irc.recv ( 4096 )
 irc.send ( 'NICK ' + username + '\r\n' )
 irc.send ( 'USER ' + username + ' ' + username + ' ' + username + ' :Python IRC\r\n' )
 irc.send ( 'JOIN ' + channel + '\r\n' )
-irc.send ( 'PRIVMSG ' + channel + ' :Submit queries for edge code identification. Symbol key: • (circle), ■ (square), ▲ (triangle), + (plus), x (equis). Example: "square, circle, triangle"\r\n' )
+irc.send ( 'PRIVMSG ' + channel + ' :Submit queries for edge code identification. Symbol key: • (circle) | ■ (square) | ▲ (triangle) | + (plus) | x (equis). Query example: "square, circle, triangle"\r\n' )
 while True:
    data = irc.recv ( 4096 )
    if data.find ( 'PING' ) != -1:
@@ -25,7 +25,7 @@ while True:
       irc.close()
       sys.exit()
    if data.find ( 'hi ' + username ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :hi\r\n' )
+      irc.send ( 'PRIVMSG ' + channel + ' :Submit queries for edge code identification. Symbol key: • (circle) | ■ (square) | ▲ (triangle) | + (plus) | x (equis). Query example: "square, circle, triangle"\r\n' )
    if data.find ( 'KICK' ) != -1: #When you're kicked log back in XD
       irc.send ( 'JOIN ' + channel + '\r\n' )
    if data.find ( 'circle' ) != -1:
