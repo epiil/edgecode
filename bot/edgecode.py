@@ -26,50 +26,8 @@ while True:
       sys.exit()
    if data.find ( 'hi ' + username ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Submit queries for edge code identification. Symbol key: • (circle) | ■ (square) | ▲ (triangle) | + (plus) | x (equis). Query example: "square, circle, triangle"\r\n' )
-   if data.find ( 'KICK' ) != -1: #When you're kicked log back in XD
+   if data.find ( 'KICK' ) != -1: #When you're kicked log back in
       irc.send ( 'JOIN ' + channel + '\r\n' )
-   if data.find ( 'circle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • (circle) 1916 1936 1956 1976\r\n' )
-   if data.find ( 'square' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ (square) 1917 1937 1957 1977\r\n' )
-   if data.find ( 'triangle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ (triangle) 1918 1938 1958 1978\r\n' )
-   if data.find ( 'circle, circle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • • (circle, circle) 1919 1939 1959 1979\r\n' )
-   if data.find ( 'square, square' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ ■ (square, square) 1920 1940 1960 1980\r\n' )
-   if data.find ( 'triangle, triangle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ ▲ (triangle, triangle) 1921 1941 1961 1981\r\n' )
-   if data.find ( 'circle, square' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • ■ (circle, square) 1922 1942 1962\r\n' )
-   if data.find ( 'circle, triangle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • ▲ (circle, triangle) 1923 1943 1963 \r\n' )
-   if data.find ( 'triangle, square' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ ■ (triangle, square) 1924 1944 1964\r\n' )
-   if data.find ( 'square, circle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ • (square, circle) 1925 1945 1965\r\n' )
-   if data.find ( 'triangle, circle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ • (triangle, circle) 1926 1946 1966\r\n' )
-   if data.find ( 'square, triangle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ ▲ (square, triangle) 1927 1947 1967\r\n' )
-   if data.find ( 'circle, circle, circle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • • • (circle, circle, circle) 1928 1948\r\n' )
-   if data.find ( 'plus, plus' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ++ (plus, plus) 1968\r\n' )
-   if data.find ( 'plus' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + (plus) 1929 1949 1969\r\n' )
-   if data.find ( 'triangle, plus' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ + (triangle, plus) 1930 1950 1970\r\n' )
-   if data.find ( 'circle, plus' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • + (circle, plus) 1931* 1951 1971\r\n' )
-   if data.find ( 'square, plus' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ + (square, plus) 1932 1952 1972\r\n' )
-   if data.find ( 'plus, triangle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + ▲ (plus, triangle) 1933 1953 1973\r\n' )
-   if data.find ( 'plus, circle' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + • (plus, circle) 1934 1954 1974\r\n' )
-   if data.find ( 'plus, square' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + ■ (plus, square) 1935 1955 1975\r\n' )
    if data.find ( 'circle, square, equis' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • ■ x (circle, square, equis) 1982\r\n' )
    if data.find ( 'equis, triangle, equis' ) != -1:
@@ -122,10 +80,52 @@ while True:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ • • (triangle, circle, circle) 2006\r\n' )
    if data.find ( 'square, triangle, circle' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code:  ■ ▲ • (square, triangle, circle) 2007\r\n' )
+   if data.find ( 'circle, circle, circle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • • • (circle, circle, circle) 1928 1948\r\n' )
    if data.find ( 'plus, plus, circle' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + + • (plus, plus, circle) 2008\r\n' )
    if data.find ( 'equis, plus, circle' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: x + • (equis, plus, circle) 2009\r\n' )
    if data.find ( 'triangle, plus, circle' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ + • (triangle, plus, circle) 2010\r\n' )
+   if data.find ( 'circle, circle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • • (circle, circle) 1919 1939 1959 1979\r\n' )
+   if data.find ( 'square, square' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ ■ (square, square) 1920 1940 1960 1980\r\n' )
+   if data.find ( 'triangle, triangle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ ▲ (triangle, triangle) 1921 1941 1961 1981\r\n' )
+   if data.find ( 'circle, square' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • ■ (circle, square) 1922 1942 1962\r\n' )
+   if data.find ( 'circle, triangle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • ▲ (circle, triangle) 1923 1943 1963 \r\n' )
+   if data.find ( 'triangle, square' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ ■ (triangle, square) 1924 1944 1964\r\n' )
+   if data.find ( 'square, circle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ • (square, circle) 1925 1945 1965\r\n' )
+   if data.find ( 'triangle, circle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ • (triangle, circle) 1926 1946 1966\r\n' )
+   if data.find ( 'square, triangle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ ▲ (square, triangle) 1927 1947 1967\r\n' )
+   if data.find ( 'plus, plus' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ++ (plus, plus) 1968\r\n' )
+   if data.find ( 'triangle, plus' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ + (triangle, plus) 1930 1950 1970\r\n' )
+   if data.find ( 'circle, plus' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • + (circle, plus) 1931* 1951 1971\r\n' )
+   if data.find ( 'square, plus' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ + (square, plus) 1932 1952 1972\r\n' )
+   if data.find ( 'plus, triangle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + ▲ (plus, triangle) 1933 1953 1973\r\n' )
+   if data.find ( 'plus, circle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + • (plus, circle) 1934 1954 1974\r\n' )
+   if data.find ( 'plus, square' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + ■ (plus, square) 1935 1955 1975\r\n' )
+   if data.find ( 'circle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • (circle) 1916 1936 1956 1976\r\n' )
+   if data.find ( 'square' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ (square) 1917 1937 1957 1977\r\n' )
+   if data.find ( 'triangle' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ (triangle) 1918 1938 1958 1978\r\n' )
+   if data.find ( 'plus' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + (plus) 1929 1949 1969\r\n' )
    print data
