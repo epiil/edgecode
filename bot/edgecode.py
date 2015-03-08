@@ -130,6 +130,24 @@ while True:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ (triangle) 1918 1938 1958 1978\r\n' )
     elif data.find ( 'plus' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: + (plus) 1929 1949 1969\r\n' )
-   
+    elif data.find ( 'What is the edge code for the year 1916' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • (circle) 1916\r\n' )
+    elif data.find ( 'What is the edge code for the year 1917' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ (square) 1917\r\n' )
+    elif data.find ( 'What is the edge code for the year 1918' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ (triangle) 1918\r\n' )
+    elif data.find ( 'What is the edge code for the year 1919' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • • (circle, circle) 1919\r\n' )
+    elif data.find (username + 'What is the edge code for the year 1920' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ ■ (square, square) 1920\r\n' )
+    elif data.find ( 'What is the edge code for the year 1921' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ ▲ (triangle, triangle) 1921\r\n' )
+    elif data.find ( 'What is the edge code for the year 1922' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • ■ (circle, square) 1922\r\n' )
+    elif data.find ( 'What is the edge code for the year 1923' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • ▲ (circle, triangle) 1923\r\n' )
+    elif data.find ( 'What is the edge code for the year 1924' ) != -1:
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ ■ (triangle, square) 1924\r\n' )
+    
   find_edge()
   print data
