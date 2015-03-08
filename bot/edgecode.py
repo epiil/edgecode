@@ -7,14 +7,16 @@ import os,socket,sys
 network = 'chat.freenode.net'
 port = 6667
 channel = '#avpres'
-username = 'edgecodebot2'
+username = 'edgecodes'
 irc = socket.socket ( socket.AF_INET, socket.SOCK_STREAM ) #create socket
 irc.connect ( ( network, port ) ) #connect with the server
 print irc.recv ( 4096 )
 irc.send ( 'NICK ' + username + '\r\n' )
 irc.send ( 'USER ' + username + ' ' + username + ' ' + username + ' :Python IRC\r\n' )
 irc.send ( 'JOIN ' + channel + '\r\n' )
-irc.send ( 'PRIVMSG ' + channel + ' :Submit queries for edge code identification. Symbol key: • (circle) | ■ (square) | ▲ (triangle) | + (plus) | x (equis). Query example: "square, circle, triangle"\r\n' )
+irc.send ( 'PRIVMSG ' + channel + ' :Edgecode: Submit queries for edge code identification.\r\n' )
+irc.send ( 'PRIVMSG ' + channel + ' :Symbol key: • (circle) | ■ (square) | ▲ (triangle) | + (plus) | x (equis)\r\n' )
+irc.send ( 'PRIVMSG ' + channel + ' :Query example: "square, circle, triangle" , "What is the edge code for the year 1916"\r\n' )
 while True:
   data = irc.recv ( 4096 )
   if data.find ( 'PING' ) != -1:
@@ -25,7 +27,9 @@ while True:
     irc.close()
     sys.exit()
   if data.find ( 'hi ' + username ) != -1:
-    irc.send ( 'PRIVMSG ' + channel + ' :Submit queries for edge code identification. Symbol key: • (circle) | ■ (square) | ▲ (triangle) | + (plus) | x (equis). Query example: "square, circle, triangle"\r\n' )
+    irc.send ( 'PRIVMSG ' + channel + ' :Edgecode: Submit queries for edge code identification.\r\n' )
+    irc.send ( 'PRIVMSG ' + channel + ' :Symbol key: • (circle) | ■ (square) | ▲ (triangle) | + (plus) | x (equis)\r\n' )
+    irc.send ( 'PRIVMSG ' + channel + ' :Query example: "square, circle, triangle" , "What is the edge code for the year 1916"\r\n' )
   if data.find ( 'KICK' ) != -1: #When you're kicked log back in
     irc.send ( 'JOIN ' + channel + '\r\n' )
 
@@ -125,7 +129,8 @@ while True:
     elif data.find (username + ' circle' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: • (circle) 1916 1936 1956 1976\r\n' )
     elif data.find (username + ' square' ) != -1:
-      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ (square) 1917 1937 1957 1977\r\n' )
+      irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ■ (square)\r\n' )
+      irc.send ( 'PRIVMSG ' + channel + ' :Years of manufacture: 1917, 1937, 1957, 1977\r\n' )
     elif data.find (username + ' triangle' ) != -1:
       irc.send ( 'PRIVMSG ' + channel + ' :Kodak edge code: ▲ (triangle) 1918 1938 1958 1978\r\n' )
     elif data.find (username + ' plus' ) != -1:
